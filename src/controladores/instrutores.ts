@@ -22,6 +22,17 @@ export function listar (req: Request, res:Response) {
              if (!instrutor){
               res.status(404).json({
               mensagem: 'instrutor não encontrado(a)'})}
+    res.status(200).json(instrutor)}
 
-     res.status(200).json(instrutor)
+// cadastrar um instrutor
+export function cadastrar (req: Request, res:Response) {
+    console.log(req.body)
+    const {nome, email} = req.body
+    const novoinstrutor = {
+        id: 4,
+        nome,
+        email}
+    instrutores.push (novoinstrutor)
+    res.status(201).json(novoinstrutor)
 }
+
