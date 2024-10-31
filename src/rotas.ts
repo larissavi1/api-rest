@@ -1,6 +1,6 @@
 import { Router } from "express"; 
 import { cadastrar, detalhar,editar,editaremail,excluir,listar,} from "./controladores/instrutores";
-import { cadastraraula } from "./controladores/aulas";
+import { cadastraraula, excluiraula } from "./controladores/aulas";
 
 const rotas = Router()
 
@@ -24,7 +24,7 @@ rotas.delete('/deletar-instrutor/:id',excluir)
 rotas.post('/instrutores/:id/aulas', cadastraraula)
 
 //excluir a aula para um instrutor
-
+rotas.delete('/intrutores/:id/aulas/idAula', excluiraula)
 
 
 

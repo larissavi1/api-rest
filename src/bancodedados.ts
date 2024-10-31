@@ -3,7 +3,7 @@ type Tinstrutores = {
 
 type Tidentificador = number
 
-type Taulas = {id: number, nome: string}
+type Taulas = {id: number, nome: string }
 
 type Tbancodedados = {proximoIdentificador: Tidentificador,
                      instrutores: Tinstrutores[],
